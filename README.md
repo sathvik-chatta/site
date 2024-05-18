@@ -1,2 +1,2 @@
-# chatta.github.io
+# Sathvik Chatta
 all about Sathvik Chatta
