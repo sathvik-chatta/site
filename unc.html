@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word Bouncing</title>
+<style>
+    #container {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+        overflow: hidden;
+    }
+    .word {
+        position: absolute;
+        font-size: 20px;
+        color: blue;
+        white-space: nowrap;
+    }
+</style>
+</head>
+<body>
+<div id="container">
+    <div class="word" id="word1">Sathvik</div>
+    <div class="word" id="word2">Chatta</div>
+</div>
+<script>
+    const container = document.getElementById('container');
+    const word1 = document.getElementById('word1');
+    const word2 = document.getElementById('word2');
+    
+    let x1 = 0, y1 = 0, dx1 = 1, dy1 = 1;
+    let x2 = 0, y2 = 30, dx2 = 1, dy2 = 1;
+
+    function animateWords() {
+        x1 += dx1;
+        y1 += dy1;
+        x2 += dx2;
+        y2 += dy2;
+        
+        if (x1 >= container.offsetWidth - word1.offsetWidth || x1 <= 0) {
+            dx1 = -dx1;
+        }
+        if (y1 >= container.offsetHeight - word1.offsetHeight || y1 <= 0) {
+            dy1 = -dy1;
+        }
+        
+        if (x2 >= container.offsetWidth - word2.offsetWidth || x2 <= 0) {
+            dx2 = -dx2;
+        }
+        if (y2 >= container.offsetHeight - word2.offsetHeight || y2 <= 0) {
+            dy2 = -dy2;
+        }
+        
+        word1.style.left = x1 + 'px';
+        word1.style.top = y1 + 'px';
+        word2.style.left = x2 + 'px';
+        word2.style.top = y2 + 'px';
+        
+        requestAnimationFrame(animateWords);
+    }
+
+    animateWords();
+</script>
+</body>
+</html>
