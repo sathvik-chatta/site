@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sathvik Chatta's Page</title>
+    <style>
+        body {
+            background-color: #FFB6C1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .top-left-js {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 200px;
+            height: 150px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+        .center-js {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            width: 600px;
+            height: 400px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Space for small JavaScript content in the top left corner -->
+        <div class="top-left-js" id="top-left-js">
+            <!-- JavaScript content will be inserted here -->
+        </div>
+        
+        <!-- Space for large JavaScript content dead center in the middle -->
+        <div class="center-js" id="center-js">
+            <!-- JavaScript content will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Including JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
