@@ -1,4 +1,4 @@
-const container = document.getElementById('container');
+const container = document.querySelector('.container');
 const word1 = document.getElementById('Sathvik');
 const word2 = document.getElementById('Chatta');
 
